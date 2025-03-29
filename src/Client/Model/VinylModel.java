@@ -22,6 +22,7 @@ public class VinylModel {
         this.currentHolder.set(currentHolder);
     }
 
+
     public VinylModel(JsonObject jsonObject) {
         this.id.set(jsonObject.get("id").getAsInt());
         this.title.set(jsonObject.get("title").getAsString());

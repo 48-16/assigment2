@@ -13,7 +13,7 @@ public class VinylClient extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Client/View/MainViewFXML.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Client/View/MainViewFXML.fxml"));
         VBox root = loader.load();
         mainController = loader.getController();
 

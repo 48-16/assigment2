@@ -90,9 +90,13 @@ public class MainViewModel implements NetworkListener {
 
         if ("getAllVinyls".equals(action)) {
             JsonArray vinylsArray = response.getAsJsonArray("vinyls");
+            // In MainViewModel.java, handleResponse method
             Platform.runLater(() -> {
                 vinyls.clear();
-                vinylsArray.forEach(vinylObj -> vinyls.add(gson.fromJson(vinylObj, VinylModel.class)));
+                vinylsArray.forEach(vinylElement -> {
+                    JsonObject vinylObj = vinylElement.getAsJsonObject();
+                    vinyls.add(new VinylModel(vinylObj));
+                });
                 statusMessage.set("Vinyl list updated");
             });
         } else {
