@@ -31,10 +31,8 @@ public class Logger {
         String timestamp = dateFormat.format(new Date());
         String logMessage = timestamp + " - " + message;
 
-        // Log to console
         System.out.println(logMessage);
 
-        // Log to file
         if (fileWriter != null) {
             fileWriter.println(logMessage);
         }

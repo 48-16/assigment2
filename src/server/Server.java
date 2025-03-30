@@ -23,7 +23,6 @@ public class Server {
     }
 
     private void initializeVinylRepository() {
-        // Add some sample vinyls to the repository
         vinylRepository.addVinyl(new Vinyl(1, "Thriller", "Michael Jackson", "Pop", 1982));
         vinylRepository.addVinyl(new Vinyl(2, "Back in Black", "AC/DC", "Rock", 1980));
         vinylRepository.addVinyl(new Vinyl(3, "The Dark Side of the Moon", "Pink Floyd", "Progressive Rock", 1973));

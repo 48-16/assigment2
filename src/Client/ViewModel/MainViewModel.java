@@ -90,7 +90,6 @@ public class MainViewModel implements NetworkListener {
 
         if ("getAllVinyls".equals(action)) {
             JsonArray vinylsArray = response.getAsJsonArray("vinyls");
-            // In MainViewModel.java, handleResponse method
             Platform.runLater(() -> {
                 vinyls.clear();
                 vinylsArray.forEach(vinylElement -> {
@@ -143,7 +142,6 @@ public class MainViewModel implements NetworkListener {
         }
     }
 
-    // Getters for observable properties
     public ObservableList<VinylModel> getVinyls() {
         return vinyls;
     }

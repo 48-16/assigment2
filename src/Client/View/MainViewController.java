@@ -11,6 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class MainViewController {
     @FXML
@@ -51,8 +52,17 @@ public class MainViewController {
         artistColumn.setCellValueFactory(new PropertyValueFactory<>("artist"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // Connect to server when view is loaded
-        String serverAddress = "localhost"; // Can be changed or made configurable
+        // Prompt for server address in console
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter server IP address: ");
+        String serverAddress = scanner.nextLine().trim();
+
+        // Use default if empty
+        if (serverAddress.isEmpty()) {
+            serverAddress = "localhost";
+            System.out.println("Using default server address: " + serverAddress);
+        }
+
         int serverPort = 8888;
 
         viewModel = new MainViewModel(serverAddress, serverPort);
@@ -64,12 +74,11 @@ public class MainViewController {
         statusLabel.textProperty().bind(viewModel.statusMessageProperty());
 
         // Bind client ID
-        clientIdLabel.textProperty().bind(Bindings.concat("Client ID: ", viewModel.clientIdProperty()));
 
 
         // Connect to server
         if (!viewModel.connect()) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Failed to connect to server.", ButtonType.OK);
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Failed to connect to server at " + serverAddress + ":" + serverPort, ButtonType.OK);
             alert.showAndWait();
         }
     }
@@ -105,8 +114,6 @@ public class MainViewController {
             viewModel.removeVinyl(selectedVinyl);
         }
     }
-
-
 
     @FXML
     private void refreshVinyls() {

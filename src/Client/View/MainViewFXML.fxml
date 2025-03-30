@@ -7,7 +7,7 @@
 <?import javafx.scene.control.Label?>
 
 <VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="Client.View.MainViewController">
-    <Label fx:id="clientIdLabel" text="Client ID: "/>
+
     <Label fx:id="statusLabel" text="Status: Not connected"/>
 
     <TableView fx:id="vinylTable" VBox.vgrow="ALWAYS">

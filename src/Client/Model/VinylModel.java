@@ -33,7 +33,6 @@ public class VinylModel {
         this.currentHolder.set(jsonObject.get("currentHolder").getAsString());
     }
 
-    // Getters and setters for properties
     public IntegerProperty idProperty() {
         return id;
     }
@@ -62,7 +61,6 @@ public class VinylModel {
         return currentHolder;
     }
 
-    // Regular getters
     public int getId() {
         return id.get();
     }
@@ -91,7 +89,6 @@ public class VinylModel {
         return currentHolder.get();
     }
 
-    // Setters
     public void setStatus(String status) {
         this.status.set(status);
     }

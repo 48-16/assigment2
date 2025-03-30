@@ -1,2 +1,31 @@
 2025-03-29 21:46:57 - Server started on port 8888
 2025-03-29 21:49:19 - Server started on port 8888
+2025-03-29 21:56:40 - Server started on port 8888
+2025-03-29 21:57:34 - New client connected: 127.0.0.1
+2025-03-29 21:57:34 - Received from client: {"action":"getAllVinyls","clientId":"278ae721"}
+2025-03-29 22:00:13 - Client handler error: Connection reset
+2025-03-29 22:00:13 - Client disconnected: 127.0.0.1
+2025-03-29 22:00:15 - New client connected: 127.0.0.1
+2025-03-29 22:00:15 - Received from client: {"action":"getAllVinyls","clientId":"56aa89a1"}
+2025-03-29 22:00:18 - Received from client: {"action":"reserveVinyl","vinylId":1,"clientId":"56aa89a1"}
+2025-03-29 22:00:18 - Received from client: {"action":"getAllVinyls","clientId":"56aa89a1"}
+2025-03-29 22:00:20 - Received from client: {"action":"borrowVinyl","vinylId":1,"clientId":"56aa89a1"}
+2025-03-29 22:00:20 - Received from client: {"action":"getAllVinyls","clientId":"56aa89a1"}
+2025-03-29 22:05:51 - Received from client: {"action":"getAllVinyls","clientId":"56aa89a1"}
+2025-03-29 22:05:55 - Received from client: {"action":"borrowVinyl","vinylId":2,"clientId":"56aa89a1"}
+2025-03-29 22:05:55 - Received from client: {"action":"getAllVinyls","clientId":"56aa89a1"}
+2025-03-29 22:05:56 - Received from client: {"action":"borrowVinyl","vinylId":3,"clientId":"56aa89a1"}
+2025-03-29 22:05:56 - Received from client: {"action":"getAllVinyls","clientId":"56aa89a1"}
+2025-03-29 22:06:11 - Client handler error: Connection reset
+2025-03-29 22:06:11 - Client disconnected: 127.0.0.1
+2025-03-29 22:06:12 - New client connected: 127.0.0.1
+2025-03-29 22:06:12 - Received from client: {"action":"getAllVinyls","clientId":"8d507f42"}
+2025-03-29 22:19:54 - Client disconnected: 127.0.0.1
+2025-03-29 22:29:18 - Server started on port 8888
+2025-03-29 22:29:54 - New client connected: 127.0.0.1
+2025-03-29 22:29:54 - Received from client: {"action":"getAllVinyls","clientId":"e576e807"}
+2025-03-29 22:29:59 - Received from client: {"action":"reserveVinyl","vinylId":3,"clientId":"e576e807"}
+2025-03-29 22:29:59 - Received from client: {"action":"getAllVinyls","clientId":"e576e807"}
+2025-03-29 22:30:00 - Received from client: {"action":"reserveVinyl","vinylId":4,"clientId":"e576e807"}
+2025-03-29 22:30:00 - Received from client: {"action":"getAllVinyls","clientId":"e576e807"}
+2025-03-29 22:31:56 - Client disconnected: 127.0.0.1
